@@ -73,5 +73,39 @@ def pattern6(n):
         print(" " * s + "*" * (2 * (n - i) - 1))
 
 
+def pattern7(n):
+    """
+    * * * * *
+    *       *
+    *       *
+    *       *
+    * * * * *
+    """
+    for i in range(n):
+        for j in range(n):
+            if i == 0 or i == n - 1 or j == 0 or j == n - 1:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        print()
+
+
+def pattern8(n):
+    """
+    * * * * *
+    * *   * *
+    *   *   *
+    * *   * *
+    * * * * *
+    """
+    for i in range(n):
+        for j in range(n):
+            if i == 0 or i == n - 1 or j == 0 or j == n - 1 or i == j or i + j == n-1:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        print()
+
+
 n = 5
-pattern6(n)
+pattern8(n)
