@@ -4,12 +4,11 @@ def longest_unique_characters(s):
     if not s:
         return ""
     visited = set()
-    res = ""
     max_len = 0
     start = 0
     max_start = 0
+    
     for end in range(len(s)):
-
         while s[end] in visited:
             visited.remove(s[start])
             start += 1
